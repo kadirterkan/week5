@@ -8,9 +8,13 @@ public abstract class BaseAccount {
     private String id;
 
     private Double balance;
+    private String ownerAccountId;
 
     public BaseAccount(Double balance) {
         this.balance = balance;
+    }
+
+    public BaseAccount() {
     }
 
     public String getId() {
@@ -27,5 +31,13 @@ public abstract class BaseAccount {
 
     public void setBalance(Double balance) {
         this.balance = balance;
+    }
+
+    public String getOwnerAccountId() {
+        return ownerAccountId;
+    }
+
+    public void setOwnerAccountId(String ownerAccountId) {
+        this.ownerAccountId = ownerAccountId;
     }
 }

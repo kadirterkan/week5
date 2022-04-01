@@ -9,6 +9,9 @@ public class SavingAccount extends BaseAccount {
         this.interestRate = interestRate;
     }
 
+    public SavingAccount() {
+    }
+
     public Double getInterestRate() {
         return interestRate;
     }

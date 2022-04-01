@@ -1,12 +1,16 @@
 package com.example.week5.bank.entities.bank.accounts;
 
-public class LoanAccount extends BaseAccount {
+public class CreditAccount extends BaseAccount {
 
     private Double interestRate;
 
-    public LoanAccount(Double balance, Double interestRate) {
+    public CreditAccount(Double balance, Double interestRate) {
         super(balance);
         this.interestRate = interestRate;
+    }
+
+    public CreditAccount() {
+        super();
     }
 
     public Double getInterestRate() {

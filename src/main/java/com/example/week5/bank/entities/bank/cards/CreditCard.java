@@ -9,10 +9,14 @@ public class CreditCard {
 
     private Double limit;
     private Double debt;
+    private String cardOwnerId;
 
     public CreditCard(Double limit, Double debt) {
         this.limit = limit;
         this.debt = debt;
+    }
+
+    public CreditCard() {
     }
 
     public String getId() {
@@ -37,5 +41,13 @@ public class CreditCard {
 
     public void setDebt(Double debt) {
         this.debt = debt;
+    }
+
+    public String getCardOwnerId() {
+        return cardOwnerId;
+    }
+
+    public void setCardOwnerId(String cardOwnerId) {
+        this.cardOwnerId = cardOwnerId;
     }
 }

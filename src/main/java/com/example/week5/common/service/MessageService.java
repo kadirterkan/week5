@@ -7,7 +7,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class MessageService {
 
-    public MessageResponse createMessage(MessageType messageType, String message) {
-        return new MessageResponse(messageType, message);
+    public MessageResponse createSuccessMessage(String message) {
+        return new MessageResponse(MessageType.SUCCESS, message);
+    }
+
+    public MessageResponse createErrorMessage(String message) {
+        return new MessageResponse(MessageType.ERROR, message);
     }
 }

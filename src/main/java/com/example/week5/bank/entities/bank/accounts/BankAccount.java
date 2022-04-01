@@ -1,4 +1,4 @@
-package com.example.week5.bank.entities.bank;
+package com.example.week5.bank.entities.bank.accounts;
 
 import org.springframework.data.annotation.Id;
 
@@ -12,11 +12,14 @@ public class BankAccount {
     private String userId;
     private ArrayList<String> accountIds;
     private ArrayList<String> creditCards;
-    private Integer creditRating;
 
-    public BankAccount(String userId, Integer creditRating) {
+    public BankAccount(String userId) {
         this.userId = userId;
-        this.creditRating = creditRating;
+        this.accountIds = new ArrayList<>();
+        this.creditCards = new ArrayList<>();
+    }
+
+    public BankAccount() {
         this.accountIds = new ArrayList<>();
         this.creditCards = new ArrayList<>();
     }
@@ -51,13 +54,5 @@ public class BankAccount {
 
     public void setCreditCards(ArrayList<String> creditCards) {
         this.creditCards = creditCards;
-    }
-
-    public Integer getCreditRating() {
-        return creditRating;
-    }
-
-    public void setCreditRating(Integer creditRating) {
-        this.creditRating = creditRating;
     }
 }
